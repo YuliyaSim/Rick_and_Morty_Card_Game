@@ -40,7 +40,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="{% url 'card_app:homepage' %}" style="font:get_schwifty">
-            <img src="{% static "images/rnm_logo.png" %}" width=200px>
+            <img src="{% static "images/rnm_logo.jpg" %}" width=200px>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -56,7 +56,7 @@
               <a href="{% url 'forum_app:forum' %}" class="nav-link">Forum</a>
             </li>
             <li class="nav-item">
-              <a href="{% url 'profile_app:profile' %}" class="nav-link">Profile ({{ user.username }})</a>
+              <a href="{% url 'profile_app:add_avatar' %}" class="nav-link">Profile ({{ user.username }})</a>
             </li>
             <li class="nav-item active">
         <a class="nav-link" href="{% url 'profile_app:logout' %}">Logout</a>

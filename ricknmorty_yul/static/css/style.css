@@ -7529,7 +7529,7 @@ h1, h2, h3, h4, h5,
       background: -o-linear-gradient(45deg, #29bae4 0%, #ee76ad 100%);
       background: -ms-linear-gradient(45deg, #29bae4 0%, #ee76ad 100%);
       background: linear-gradient(45deg, #29bae4 0%, #ee76ad 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#448ef6', endColorstr='#af05a9', GradientType=1 ); }
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='306c75', endColorstr='#af05a9', GradientType=1 ); }
     .home-slider .slider-item .slider-text {
       color: #fff;
       height: calc(100vh - 117px);
@@ -8956,3 +8956,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+

@@ -57,17 +57,10 @@ def logout_view(request):
 class ProfileView(CreateView):
     form_class = ProfileForm
     template_name = 'profile_app/profile.html'
-    success_url = 'profile_app:avatar_profile'
+    success_url = 'profile_app:profile'
 
 
-def MainProfileView():
-    pass
-# about page with cards in bootstrap
+def main_profile_view(request):
+    return render(request, 'profile_app/main_profile.html')
 
 
-# class CreateProfile(CreateView):
-#     form_class = ProfileForm
-#     template_name = 'profile_app/profile.html'
-#
-#     def get_object(self, queryset=None):
-#         return Profile.objects.get(pk=int(self.kwargs['pk']))
