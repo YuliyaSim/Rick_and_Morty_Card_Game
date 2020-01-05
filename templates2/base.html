@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
 
@@ -24,6 +25,40 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head_css %}
+            {% block head_css_site %}
+
+            {% endblock head_css_site %}
+
+    {% endblock head_css %}
+    <style>
+
+    @font-face {
+      font-family: 'schwifty';
+      src: local('schwifty'),
+         url('{% static 'fonts/schwifty.ttf' %}');
+    }
+    h1 {
+      font-family : schwifty !important;
+      color: #01B4C6 !important;
+      font-size: 100px !important;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      text-shadow-width: 10px;
+      -webkit-animation: glow 1s ease-in-out infinite alternate !important;
+      -moz-animation: glow 1s ease-in-out infinite alternate !important;
+      animation: glow 1s ease-in-out infinite alternate !important;
+    }
+    @-webkit-keyframes glow {
+      from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e6d700, 0 0 40px #e6d700, 0 0 50px #e6d700, 0 0 60px #e6d700, 0 0 70px #e6d700;
+      }
+      to {
+      text-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px #yellow, 0 0 70px yellow, 0 0 80px yellow;
+      }
+    }
+
+
+    </style>
 
   </head>
 
@@ -31,8 +66,9 @@
   <!-- NAV BAR -->
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="overlay"></div>
       <div class="container">
-        <a class="navbar-brand" href="index.html">RICK AND MORTY</a>
+<!--        <a class="navbar-brand" href="index.html">RICK AND MORTY</a>-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -53,13 +89,13 @@
     <!-- SECTION 1 -->
 
     <section id="section1" class="home-slider ftco-degree-bg">
-      <div class="slider-item bread-wrap" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
+      <div class="slider-item bread-wrap" style="background-image: url('/static/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
             <div class="col-md-10 col-sm-12 ftco-animate mb-4 text-center">
               <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-              <h1 class="mb-3 bread">SECTION 1</h1>
+              <h1 class="mb-3 bread" >Rick and  Morty</h1>
             </div>
           </div>
         </div>
@@ -70,20 +106,9 @@
 
     <section id="section2" class="ftco-section-2 ftco-degree-bg">
       <div class="container d-flex">
-        <div class="section-2-blocks-wrapper row d-flex">
-          <div class="img col-sm-12 col-lg-6 order-last" style="background-image: url('images/about.jpg');">
-          </div>
-          <div class="text col-lg-6 order-first ftco-animate">
+        <div class="text-inner align-self-start">
+            {% block content%} {% endblock %}
 
-            <div class="text-inner align-self-start">
-
-              <h3 class="heading">Welcome to our website</h3>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            </div>
-
-          </div>
         </div>
       </div>
     </section>
@@ -138,7 +163,7 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
