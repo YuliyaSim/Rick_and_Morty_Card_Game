@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<p>THIS IS MAIN PROFILE PAGE FOR THE USER</p>
+
+<button type="button" class="btn btn-outline-primary">
+
+    <a href="{% url 'profile_app:add_avatar' %}">Add Avatar</a>
+</button>
+{% endblock %}
